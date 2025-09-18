@@ -42,6 +42,16 @@ services:
     env_file: docker-compose.env
     environment:
       PAPERLESS_REDIS: redis://broker:6379
+      PAPERLESS_OCR_LANGUAGE: nld
+      PAPERLESS_OCR_LANGUAGES: nld eng
+      PAPERLESS_OCR_MODE: skip
+      PAPERLESS_OCR_SKIP_ARCHIVE_FILE: never
+      PAPERLESS_OCR_OUTPUT_TYPE: pdfa
+      PAPERLESS_OCR_COLOR_CONVERSION_STRATEGY: LeaveColorUnchanged
+      PAPERLESS_OCR_CLEAN: clean
+      PAPERLESS_OCR_DESKEW: true
+      PAPERLESS_OCR_ROTATE_PAGES: true
+      PAPERLESS_OCR_ROTATE_PAGES_THRESHOLD: 12.0
 volumes:
   data:
   media:
